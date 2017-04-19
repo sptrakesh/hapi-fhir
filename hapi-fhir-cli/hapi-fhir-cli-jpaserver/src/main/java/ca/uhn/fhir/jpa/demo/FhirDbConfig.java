@@ -14,7 +14,7 @@ public class FhirDbConfig {
 	@Bean()
 	public Properties jpaProperties() {
 		Properties extraProperties = new Properties();
-		extraProperties.put("hibernate.dialect", org.hibernate.dialect.DerbyTenSevenDialect.class.getName());
+		extraProperties.put("hibernate.dialect", org.hibernate.dialect.MariaDB53Dialect.class.getName());
 		extraProperties.put("hibernate.format_sql", "true");
 		extraProperties.put("hibernate.show_sql", "false");
 		extraProperties.put("hibernate.hbm2ddl.auto", "update");
