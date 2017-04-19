@@ -52,10 +52,12 @@ public class FhirServerConfig extends BaseJavaConfigDstu2 {
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {
 		BasicDataSource retVal = new BasicDataSource();
-		retVal.setDriver(new org.apache.derby.jdbc.EmbeddedDriver());
-		retVal.setUrl("jdbc:derby:directory:target/jpaserver_derby_files;create=true");
-		retVal.setUsername("");
-		retVal.setPassword("");
+		//retVal.setDriver(new org.apache.derby.jdbc.EmbeddedDriver());
+		//retVal.setUrl("jdbc:derby:directory:target/jpaserver_derby_files;create=true");
+		retVal.setDriver(new org.mariadb.jdbc.Driver());
+		retVal.setUrl("jdbc:mariadb://localhost:3306/fhir");
+		retVal.setUsername("fhir");
+		retVal.setPassword("fhir");
 		return retVal;
 	}
 
