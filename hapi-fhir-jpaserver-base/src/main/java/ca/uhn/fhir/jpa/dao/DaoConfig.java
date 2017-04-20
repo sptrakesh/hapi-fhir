@@ -86,7 +86,7 @@ public class DaoConfig {
 	// update setter javadoc if default changes
 	// ***
 	private int myMaximumExpansionSize = 5000;
-	private ResourceEncodingEnum myResourceEncoding = ResourceEncodingEnum.JSONC;
+	private ResourceEncodingEnum myResourceEncoding = ResourceEncodingEnum.JSON;
 	private boolean mySchedulingDisabled;
 	private boolean mySubscriptionEnabled;
 	private long mySubscriptionPollDelay = 1000;
