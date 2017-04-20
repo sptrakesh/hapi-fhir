@@ -5,6 +5,7 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import ca.uhn.fhir.jpa.entity.ResourceEncodingEnum;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.lang3.time.DateUtils;
 import org.hibernate.jpa.HibernatePersistenceProvider;
@@ -46,6 +47,7 @@ public class FhirServerConfigDstu3 extends BaseJavaConfigDstu3 {
 		retVal.setSubscriptionEnabled(true);
 		retVal.setSubscriptionPollDelay(5000);
 		retVal.setSubscriptionPurgeInactiveAfterMillis(DateUtils.MILLIS_PER_HOUR);
+		retVal.setResourceEncoding(ResourceEncodingEnum.JSON);
 		retVal.setAllowMultipleDelete(true);
 		return retVal;
 	}
