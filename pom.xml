@@ -370,6 +370,8 @@
 		<slf4j_target_version>1.6.0</slf4j_target_version>
 
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.test.skip>true</maven.test.skip>
+		<maven.test.failure.ignore>true</maven.test.failure.ignore>
 	</properties>
 
 	<dependencyManagement>
