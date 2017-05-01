@@ -139,6 +139,7 @@ public class RuntimeResourceDefinition extends BaseRuntimeElementCompositeDefini
 	}
 
 	public RuntimeSearchParam getSearchParam(String theName) {
+		System.out.println("RuntimeResourceDefinition.getSearchParam: " + myNameToSearchParam.size() );
 		validateSealed();
 		return myNameToSearchParam.get(theName);
 	}
